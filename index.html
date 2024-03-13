@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fbe050d8e0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="images/logo.png" class="logo"> -->
+                <a class="txt" href="#header"><span>N</span>usaif P K</a>
+                <ul id="sideMenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>MERN Stack Developer</p>
+                <h1>Hi, I'm <span>Nusaif P K</span><br>from India</h1>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ----------------------about------------------- -->
+    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I'm Nusaif PK, a MERN stack developer passionate about crafting innovative and user-friendly web applications. With a strong foundation in MongoDB, Express.js, React.js, and Node.js, I specialize in creating dynamic, interactive, and scalable solutions tailored to meet diverse business needs.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>MongoDB</span><br>Database Management with MongoDB</li>
+                            <li><span>Express.js</span><br>Backend Development with Express.js</li>
+                            <li><span>React.js</span><br>Building User Interfaces with React.js</li>
+                            <li><span>Node.js</span><br>Server-side Development with Node.js</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023-Current</span><br>Working as an intern in Bridgeon Solutions</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018-2020</span><br>Computer Science in GHSS Ezhur</li>
+                            <li><span>2020-2023</span><br>Bachelor of Computer Application under Calicut University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------services-------------------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <P>As a MERN Stack developer, i create the visual aspects of a website, including layout, color schemes, typography, and overall aesthetic appeal. It involves both the technical aspects of designing the website's structure and the creative aspects of designing its look and feel.</P>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa consequatur quos est atque nam! Aspernatur quibusdam debitis provident eaque maxime veniam reiciendis rerum molestias tempore, labore, quas non sapiente.</P>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa consequatur quos est atque nam! Aspernatur quibusdam debitis provident eaque maxime veniam reiciendis rerum molestias tempore, labore, quas non sapiente.</P>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------portfolio------------------------------>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.jpg">
+                    <div class="layer">
+                        <h3>W3 School (Clone Page)</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.jpg">
+                    <div class="layer">
+                        <h3>Todo App</h3>
+                        <p>I am pleased to announce the successful creation of a Todo app using Redux Toolkit, a powerful state management library for React applications. This project has been an excellent opportunity for me to deepen my understanding of Redux and its efficient integration with React through Redux Toolkit.</p>
+                        <a href="https://nusaifpk.github.io/Todo-Redux/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.jpg">
+                    <div class="layer">
+                        <h3>XPLOR</h3>
+                        <p>XPLOR is a full-stack e-commerce web application developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack. This platform specializes in providing a wide range of shoes as products, categorized conveniently into men's and women's sections.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+        <!-------------------contact------------------------------>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p id="sendEmail"><i class="fa-solid fa-paper-plane"></i>nusaifputhiyakath1@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>9497630421</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/nusaifpk?mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://wa.link/5artj1"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/nusaifpk/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/nu__saif___?igsh=MWhtaWExaHg1Zml4Zw=="><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="images/Nusaif-P-K-FlowCV-Resume-20240311.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Nusaif</p>
+        </div>
+    </div>
+</body>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sideMenu = document.getElementById("sideMenu");
+        function openMenu(){
+            sideMenu.style.right = "0";
+        }
+        function closeMenu(){
+            sideMenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        document.getElementById("sendEmail").addEventListener("click", function() {
+            window.location.href = "mailto:nusaifputhiyakath1@gmail.com";
+        });
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzuZuw0ulgfkkw3qLlu0PBMK9RaUHEZ9NJ9OmRFh6jUDnKchtbmq3ocUeaN8_sK8FAU/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                alert("Message sent successfully...✅️")
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</html>

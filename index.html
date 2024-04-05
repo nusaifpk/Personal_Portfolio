@@ -16,11 +16,11 @@
                 <!-- <img src="images/logo.png" class="logo"> -->
                 <a class="txt" href="#header"><span>N</span>usaif P K</a>
                 <ul id="sideMenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Service</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#header" title="Home">Home</a></li>
+                    <li><a href="#about" title="About">About</a></li>
+                    <li><a href="#services" title="Service">Service</a></li>
+                    <li><a href="#portfolio" title="Portfolio">Portfolio</a></li>
+                    <li><a href="#contact" title="Contact">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openMenu()"></i>
@@ -85,19 +85,19 @@
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Design</h2>
                     <P>As a MERN Stack developer, i create the visual aspects of a website, including layout, color schemes, typography, and overall aesthetic appeal. It involves both the technical aspects of designing the website's structure and the creative aspects of designing its look and feel.</P>
-                    <a href="#">Learn More</a>
+                    <a href="#" title="Learn More">Learn More</a>
                 </div>
                 <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h2>UI/UX Design</h2>
-                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa consequatur quos est atque nam! Aspernatur quibusdam debitis provident eaque maxime veniam reiciendis rerum molestias tempore, labore, quas non sapiente.</P>
-                    <a href="#">Learn More</a>
+                    <i class="fa-solid fa-laptop"></i>
+                    <h2>Front-End</h2>
+                    <p>I specialize in creating dynamic and interactive experiences. I craft visually stunning layouts, build reusable components with React.js, and ensure smooth data flow between client and server. My focus on user experience and performance optimization results in seamless web applications that engage and delight users.</p>
+                    <a href="#" title="Learn More">Learn More</a>
                 </div>
                 <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>App Design</h2>
-                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa consequatur quos est atque nam! Aspernatur quibusdam debitis provident eaque maxime veniam reiciendis rerum molestias tempore, labore, quas non sapiente.</P>
-                    <a href="#">Learn More</a>
+                    <i class="fa-solid fa-server"></i>
+                    <h2>Back-End</h2>
+                    <P>I specialize in building scalable and secure back-end solutions using Node.js, Express.js, and MongoDB. I architect efficient server-side logic, ensure seamless communication between client and server, and prioritize scalability and security. With a focus on performance optimization and best practices, I deliver robust back-end architectures that empower web applications to perform at their best.</P>
+                    <a href="#" title="Learn More">Learn More</a>
                 </div>
             </div>
         </div>
@@ -187,13 +187,13 @@
     </script>
 
     <script>
-        var sideMenu = document.getElementById("sideMenu");
-        function openMenu(){
-            sideMenu.style.right = "0";
-        }
-        function closeMenu(){
-            sideMenu.style.right = "-200px";
-        }
+            var sideMenu = document.getElementById("sideMenu");
+            function openMenu(){
+                sideMenu.style.right = "0";
+            }
+            function closeMenu(){
+                sideMenu.style.right = "-200px";
+            }
     </script>
 
     <script>

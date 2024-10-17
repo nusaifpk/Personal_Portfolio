@@ -4,22 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/images/favIcon.jpg">
-    <title>Nusaif PK</title>
+    <title>Nusaif P K</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/fbe050d8e0.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "oX1a_EXjTSebHxaqJ",
+            });
+        })();
+    </script>
+
+    <script>
+        function SendMail(event) {
+        event.preventDefault()
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        var params = {
+            from_name: name,
+            email_id: email,
+            message: message
+        };
+
+        emailjs.send('service_uzvt43g', 'template_vqjjbyi', params)
+            .then(function(response) {
+                // alert('Email sent successfully!');
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+                showToast()
+            }, function(error) {
+                console.log('Error:', error); 
+                alert('Failed to send email. Try again later.');
+            });
+    }
+
+</script>
+
 
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <!-- <img src="images/logo.png" class="logo"> -->
                 <a class="txt" href="#header"><span>N</span>usaif P K</a>
                 <ul id="sideMenu">
                     <li><a href="#header" title="Home">Home</a></li>
                     <li><a href="#about" title="About">About</a></li>
                     <li><a href="#services" title="Service">Service</a></li>
-                    <li><a href="#portfolio" title="Portfolio">Portfolio</a></li>
+                    <li><a href="#portfolio" title="Works">Works</a></li>
                     <li><a href="#contact" title="Contact">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
                 </ul>
@@ -45,8 +83,9 @@
                     
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('project')">Projects</p>
                     </div>
 
                     <div class="tab-contents active-tab" id="skills">
@@ -55,19 +94,35 @@
                             <li><span>Express.js</span><br>Backend Development with Express.js</li>
                             <li><span>React.js</span><br>Building User Interfaces with React.js</li>
                             <li><span>Node.js</span><br>Server-side Development with Node.js</li>
-                            <li style="font-size: 14px"><span>Other</span><br>HTML • CSS • JavaScript • C • C++ • Postman • Bootstrap • Cloudinary • Razorpay • Stripe • JWT <br>• Redux • MUI • Tailwind</li>
+                            <li style="font-size: 14px"><span>Others</span><br>• HTML • CSS • JavaScript • C • C++ • Postman • Bootstrap • Cloudinary • Razorpay • Stripe • JWT <br>• Redux • MUI • Tailwind CSS • TypeScript • Next.js</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>2023-Current</span><br>Working as an intern in Bridgeon Solutions</li>
+                            <li><span>2023-Current</span><br>MERN Stack developer at <a href="https://bridgeon.in/" target="_blank">Bridgeon Solutions</a></li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
+                            <li><span>2020-2023</span><br>Bachelor of Computer Application (BCA) under Calicut University</li>
                             <li><span>2018-2020</span><br>Computer Science in GHSS Ezhur</li>
-                            <li><span>2020-2023</span><br>Bachelor of Computer Application under Calicut University</li>
                         </ul>
+                    </div>
+                    <div class="tab-contents" id="project">
+                        <ul>
+                        <li>
+                            <span>XPLOR</span><br>Developed XPLOR, an e-commerce platform using the MERN stack, designed a responsive React.js front-end, integrated JWT authentication, implemented RESTful APIs with Express.js, and optimized MongoDB data storage, leading to improved user satisfaction, reduced security vulnerabilities, faster server response times, and more efficient database operations. Collaborated with cross-functional teams to enhance development processes and project timelines.
+                            <a href="https://nusaifpk.github.io/My-Project-ECommerce/" target="_blank">View Site</a>
+                        </li>
+                        <li>
+                            <span>STAYFIND</span><br>StayFind is a hotel/resort booking app using the MERN stack, with Twilio for mobile OTP verification and Razorpay for payment processing. Deployed the frontend on Vercel and the backend on AWS EC2. Managed version control with Git, researched new technologies to improve project efficiency, used Scrum Agile Methodology to enhance development speed and teamwork, and conducted code reviews to improve code quality and maintainability.
+                            <a href="https://stay-find-clone-frontend.vercel.app/" target="_blank">View Site</a>
+                        </li>
+                        <li>
+                            <span>DAILY GRID</span><br>Developed a responsive project named DailyGrid with front-end with Next.js and Tailwind CSS, enhancing user engagement. I led a cross-functional team using Agile Scrum, completing the project within a month. I implemented JWT authentication for secure sessions and built RESTful APIs with Express.js, optimizing server performance. The front-end was deployed on Vercel, and the backend was set up on AWS, with detailed Swagger documentation. Rigorous testing and debugging minimized post-launch issues.
+                            <a href="https://daily-grid-web-nine.vercel.app/" target="_blank">View Site</a>
+                        </li>
+                    </ul>
                     </div>
                 </div>
             </div>
@@ -109,11 +164,19 @@
             <h1 class="sub-title">My Works</h1>
             <div class="work-list">
                 <div class="work">
+                    <img src="images/work-4.jpg">
+                    <div class="layer">
+                        <h3>DailyGrid</h3>
+                        <p>Developed DailyGrid, a responsive project using Next.js and Tailwind CSS to enhance user engagement. Led a cross-functional Agile Scrum team, completing the project within a month. Implemented JWT authentication and built RESTful APIs with Express.js, optimizing server performance. Deployed the front-end on Vercel and the backend on AWS, with detailed Swagger documentation. Rigorous testing and debugging minimized post-launch issues..</p>
+                        <a href="https://daily-grid-web-nine.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
                     <img src="images/work-1.jpg">
                     <div class="layer">
-                        <h3>StayFind (Hotel Booking App)</h3>
+                        <h3>StayFind</h3>
                         <p>This is a Hotel Booking Application. Traveling should be about experiencing new places, not stressing over accommodations. That's where StayFind comes in. We're here to revolutionize the way you book stays by offering a seamless, stress-free experience from start to finish. Say goodbye to endless searching and hello to finding your perfect stay with ease</p>
-                        <a href="https://stay-find-clone-frontend.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://stay-find-clone-frontend.vercel.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
@@ -121,19 +184,26 @@
                     <div class="layer">
                         <h3>Todo App</h3>
                         <p>I am pleased to announce the successful creation of a small Todo app using Redux Toolkit, a powerful state management library for React applications. This project has been an excellent opportunity for me to deepen my understanding of Redux and its efficient integration with React through Redux Toolkit.</p>
-                        <a href="https://nusaifpk.github.io/Todo-Redux/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://nusaifpk.github.io/Todo-Redux/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
+                
+            </div>
+
+            <!-- Second row -->
+            <div class="work-list" style="display: none;">
+                
                 <div class="work">
                     <img src="images/work-3.jpg">
                     <div class="layer">
                         <h3>XPLOR</h3>
                         <p>XPLOR is a full-stack e-commerce web application developed using the MERN (MongoDB, Express.js, React.js, Node.js) stack. This platform specializes in providing a wide range of shoes as products, categorized conveniently into men's and women's sections.</p>
-                        <a href="https://nusaifpk.github.io/My-Project-ECommerce/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://nusaifpk.github.io/My-Project-ECommerce/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
+            <!-- -- -->
+            <a href="#" class="btn" id="seeMoreButton">See more</a>
         </div>
     </div>
 
@@ -147,18 +217,20 @@
                     <p id="sendEmail"><i class="fa-solid fa-paper-plane"></i>nusaifputhiyakath1@gmail.com</p>
                     <p><i class="fa-solid fa-square-phone"></i>9497630421</p>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/nusaifpk?mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://wa.link/5artj1"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://www.linkedin.com/in/nusaifpk/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/nu__saif___?igsh=MWhtaWExaHg1Zml4Zw=="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/nusaifpk/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://wa.link/5artj1" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/nusaifpk/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/nu__saif___?igsh=MWhtaWExaHg1Zml4Zw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/nusaifpk" target="_blank"><i class="fa-brands fa-github"></i></a>
                     </div>
                     <a href="images/Nusaif-PK-MERN-Stack-Developer.pdf" download class="btn btn2">Download CV</a>
                 </div>
+                <div id="toast">Form submitted successfully. . .✔️</div>
                 <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <form name="submit-to-google-sheet" onsubmit="SendMail(event);">
+                        <input type="text" id="name" name="Name" placeholder="Your Name" required>
+                        <input type="email" id="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" id="message" rows="6" placeholder="Your Message" required></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
@@ -169,6 +241,16 @@
         </div>
     </div>
 </body>
+
+<script>
+    function showToast() {
+      var toast = document.getElementById("toast");
+      toast.className = "show";
+      setTimeout(function() {
+        toast.className = toast.className.replace("show", "");
+      }, 3000); 
+    }
+  </script>
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
@@ -201,19 +283,21 @@
         });
     </script>
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzuZuw0ulgfkkw3qLlu0PBMK9RaUHEZ9NJ9OmRFh6jUDnKchtbmq3ocUeaN8_sK8FAU/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById('msg')
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const seeMoreButton = document.getElementById("seeMoreButton");
+        const additionalWorks = document.querySelector(".work-list:nth-of-type(2)");
 
-        form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                alert("Message sent successfully...✅️")
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-    </script>
+        seeMoreButton.addEventListener("click", function(e) {
+            e.preventDefault(); 
+            if (additionalWorks.style.display === "none") {
+                additionalWorks.style.display = "flex"; 
+                seeMoreButton.textContent = "See less"; 
+            } else {
+                additionalWorks.style.display = "none"; 
+                seeMoreButton.textContent = "See more"; 
+            }
+        });
+    });
+</script>
 </html>
